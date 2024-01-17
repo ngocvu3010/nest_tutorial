@@ -8,10 +8,11 @@ import { TodosModule } from './todos/todos.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import config from '../ormconfig';
 import {User} from './user.entity';
+import { App2Controller } from './app2.controller';
 
 @Module({
   imports: [TypeOrmModule.forRoot(config), TypeOrmModule.forFeature([User])],
-  controllers: [AppController],
+  controllers: [AppController, App2Controller],
   providers: [AppService],
 })
 export class AppModule {}
